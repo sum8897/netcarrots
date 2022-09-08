@@ -1,0 +1,26 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      login Page
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <!-- <div>
+    <form #loginForm="ngForm" (ngSubmit)="submitDataInput(loginForm)" >
+      <div class="form-group label-float">
+        <ion-input type="tel" name="phone" #phone="ngModel" required placeholder="Phone Number * " ngModel></ion-input>
+        <span class="text-danger"
+        *ngIf="(phone.touched || loginForm.submitted) && phone.errors?.required">
+        Phone Number is required *
+    </span>
+      </div>
+    <div class="submit-button">
+  <ion-button class="submit-login-button" expand="round" type="submit" [disabled]="loginForm.form.invalid">Login With Input</ion-button>
+    </div>
+  </form>
+  </div> -->
+  <div class="submit-div">
+    <ion-button expand="round" (click)="submitData()">login</ion-button>
+  </div>
+</ion-content>

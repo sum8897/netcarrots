@@ -1,20 +1,29 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Home Page
     </ion-title>
+    <ion-icon name="power-outline" slot="end" (click)="logout()"></ion-icon>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+ <div class="user-data">
+   <ion-card *ngFor="let data of userDataAll">
+<ion-list>
+  <ion-item >
+    <ion-label>MobileNo</ion-label>
+    <ion-label>{{data.OTPCode}}</ion-label>
+  </ion-item>
+  <ion-item >
+    <ion-label>CaptchaCode</ion-label>
+    <ion-label>{{data.CaptchaCode}}</ion-label>
+  </ion-item>
+</ion-list>
+<ion-card-content>
+{{result}}
+</ion-card-content>
+   </ion-card>
+ </div>
 </ion-content>
